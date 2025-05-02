@@ -9,6 +9,35 @@ public class Osoba {
 
     private Telefon telefon;
 
+    private String soukromyEmail;
+    private String pracovniEmail;
+
+    public String getPracovniEmail() {
+        return pracovniEmail;
+    }
+
+    public void setPracovniEmail(String pracovniEmail) {
+        Objects.requireNonNull(pracovniEmail);
+        if (pracovniEmail.isBlank()) {
+            System.err.println("Pracovní email nemůže být prázdný.");
+            return;
+        }
+        this.pracovniEmail = pracovniEmail;
+    }
+
+    public String getSoukromyEmail() {
+        return soukromyEmail;
+    }
+
+    public void setSoukromyEmail(String soukromyEmail) {
+        Objects.requireNonNull(soukromyEmail);
+        if (soukromyEmail.isBlank()) {
+            System.err.println("Soukromý email nemůže být prázdný.");
+            return;
+        }
+        this.soukromyEmail = soukromyEmail;
+    }
+
     public String getJmeno() {
         return jmeno;
     }
