@@ -8,6 +8,7 @@ public class Osoba {
     private String rodneCislo;
 
     private Telefon telefon;
+
     private Adresa adresa;
 
     private String soukromyEmail;
@@ -90,8 +91,17 @@ public class Osoba {
         this.telefon = telefon;
     }
 
+    public Adresa getAdresa() {
+        return adresa;
+    }
+
+    public void setAdresa(Adresa adresa) {
+        this.adresa = adresa;
+    }
+
     public String toString() {
         return jmeno + " " + prijmeni + " (" + rodneCislo + ")";
     }
+
 }
 

@@ -9,6 +9,8 @@ import cz.czechitas.lekce5.model.Telefon;
  */
 public class HlavniProgram {
 
+
+
     /**
      * Spouštěcí metoda celé aplikace.
      *
@@ -22,5 +24,25 @@ public class HlavniProgram {
         Adresa adresa = new Adresa();
 
         adresa.setUlice("Poštova 1200/1");
-        adresa.setObec("Dolni Chabry");}
+        adresa.setObec("Dolni Chabry");
+        adresa.setCastObce("Praha 8");
+        adresa.setPsc("18400");
+
+        System.out.println(adresa.toString());
+
+
+        Osoba novak = new Osoba();
+
+        novak.setJmeno("Marketa");
+        novak.setPrijmeni("Novak");
+        novak.setRodneCislo("885521/2091");
+        novak.setAdresa(adresa);
+        novak.setPracovniEmail("veronika.vysinova@gmail.com");
+        novak.setTelefon(new Telefon());
+
+        System.out.println(novak);
+
+
+
+    }
 }

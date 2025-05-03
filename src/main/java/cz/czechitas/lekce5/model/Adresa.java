@@ -4,6 +4,10 @@ import java.sql.SQLOutput;
 import java.util.Objects;
 
 public class Adresa {
+    @Override
+    public String toString() {
+        return "Adresa: " + ulice + ' ' + castObce + ' ' + obec + ' ' + psc ;
+    }
 
     private String ulice;
     private String castObce;
@@ -60,7 +64,7 @@ public class Adresa {
         if (psc.isBlank()) {
             System.err.println("Psč nemůže být prázdné.");
         } else if (psc.matches("\\d{5}")) {
-            System.out.println("Psč obce je: " + psc);
+            return;
         } else {
             System.err.println("V hodnotě psč jsou neplatné znaky.");
         }
