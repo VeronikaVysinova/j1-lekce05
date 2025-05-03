@@ -8,6 +8,7 @@ public class Osoba {
     private String rodneCislo;
 
     private Telefon telefon;
+    private Adresa adresa;
 
     private String soukromyEmail;
     private String pracovniEmail;

@@ -1,5 +1,6 @@
 package cz.czechitas.lekce5.model;
 
+import java.sql.SQLOutput;
 import java.util.Objects;
 
 public class Adresa {
@@ -55,10 +56,19 @@ public class Adresa {
     }
 
     public void setPsc(String psc) {
-
+        Objects.requireNonNull(psc);
+        if (psc.isBlank()) {
+            System.err.println("Psč nemůže být prázdné.");
+        } else if (psc.matches("\\d{5}")) {
+            System.out.println("Psč obce je: " + psc);
+        } else {
+            System.err.println("V hodnotě psč jsou neplatné znaky.");
         }
+
+
         this.psc = psc;
     }
+
 
 
 }
